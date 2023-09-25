@@ -33,7 +33,7 @@
 // int Num2 = new Random().Next();      //точки экстремума не заданы, так как в условии это не прописано
 // Console.WriteLine($"Второе число: {Num2}");
 // int Num3 = new Random().Next();      //точки экстремума не заданы, так как в условии это не прописано
-// Console.WriteLine($"Третье число: {Num2}");
+// Console.WriteLine($"Третье число: {Num3}");
 
 // int Max = Num1;
 
