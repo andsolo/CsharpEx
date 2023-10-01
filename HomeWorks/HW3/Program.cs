@@ -2,52 +2,44 @@
 //который принимает на вход координаты двух точек pointA и pointB в виде массива целых чисел,
 //и возвращает расстояние между ними в 3D пространстве
 
-using System;
+// using System;
 
-public class Answer
-{
-    private static double Length(int[] pointA, int[] pointB)
-    {
-      // Введите свое решение ниже
-        int[] args = new int[6];
-        int x1 = args[0];
-        int x2 = args[1];
-        int x3 = args[2];
-        int y1 = args[3];
-        int y2 = args[4];
-        int y3 = args[5];
+// public class Answer
+// {
+//     private static double Length(int[] pointA, int[] pointB)
+//     {
+//       // Введите свое решение ниже
+//         double result = Math.Sqrt (Math.Pow((pointA[0] - pointB[0]), 2) + Math.Pow((pointA[1] - pointB[1]), 2)+ Math.Pow((pointA[2] - pointB[2]), 2));
+//         return result;
 
-        double result = Math.Sqrt (Math.Pow((x1 - y1), 2) + Math.Pow((x2 - y2), 2)+ Math.Pow((x3 - y3), 2));
-        return result;
+//     }
 
-    }
+//   // Не удаляйте и не меняйте метод Main! 
+//     public static void Main(string[] args) {
+//         int x1, x2, x3, y1, y2, y3;
 
-  // Не удаляйте и не меняйте метод Main! 
-    public static void Main(string[] args) {
-        int x1, x2, x3, y1, y2, y3;
+//         if (args.Length >= 6) {
+//             x1 = int.Parse(args[0]);
+//             x2 = int.Parse(args[1]);
+//             x3 = int.Parse(args[2]);
+//             y1 = int.Parse(args[3]);
+//             y2 = int.Parse(args[4]);
+//             y3 = int.Parse(args[5]);
+//         } else {
+//            // Здесь вы можете поменять значения для отправки кода на Выполнение
+//             x1 = 3;
+//             x2 = 6;
+//             x3 = 8;
+//             y1 = 2;
+//             y2 = 1;
+//             y3 = -7;
+//         }
 
-        if (args.Length >= 6) {
-            x1 = int.Parse(args[0]);
-            x2 = int.Parse(args[1]);
-            x3 = int.Parse(args[2]);
-            y1 = int.Parse(args[3]);
-            y2 = int.Parse(args[4]);
-            y3 = int.Parse(args[5]);
-        } else {
-           // Здесь вы можете поменять значения для отправки кода на Выполнение
-            x1 = 3;
-            x2 = 6;
-            x3 = 8;
-            y1 = 2;
-            y2 = 1;
-            y3 = -7;
-        }
-
-        // Не удаляйте строки ниже
-        double result = Length(new int[]{x1, x2, x3}, new int[]{y1, y2, y3});
-        Console.WriteLine($"{result:F2}");
-    }
-}
+//         // Не удаляйте строки ниже
+//         double result = Length(new int[]{x1, x2, x3}, new int[]{y1, y2, y3});
+//         Console.WriteLine($"{result:F2}");
+//     }
+// }
 
 //------- простой вариант решения:------------
 
@@ -68,50 +60,7 @@ public class Answer
 // double c = Math.Sqrt (Math.Pow((xA - xB), 2) + Math.Pow((yA - yB), 2)+ Math.Pow((zA - zB), 2));
 // System.Console.WriteLine(c);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //----------------------------------------------------------------------------------------------------------------------------
-//----------------------------------------------------------------------------------------------------------------------------
-//----------------------------------------------------------------------------------------------------------------------------
-
 // Задача 19. Напишите программу, которая принимает на вход
 // пятизначное число и проверяет является ли оно полиндромом // a, b, c, d, e
 
