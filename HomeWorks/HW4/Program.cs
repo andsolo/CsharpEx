@@ -36,33 +36,33 @@
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
 
-Console.Write("Введите минимальное возможное число в массиве: ");
-int Num1 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите максимальное возможное число в массиве: ");
-int Num2 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите минимальное возможное число в массиве: ");
+// int Num1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите максимальное возможное число в массиве: ");
+// int Num2 = Convert.ToInt32(Console.ReadLine());
 
-void FillArray (int[] Massive)
-{
-    int length = Massive.Length;
-    int index = 0;
-    while (index < length) 
-    {
-        Massive[index] = new Random().Next(Num1, Num2); 
-        index++;
-    }
-}
+// void FillArray (int[] Massive)
+// {
+//     int length = Massive.Length;
+//     int index = 0;
+//     while (index < length) 
+//     {
+//         Massive[index] = new Random().Next(Num1, Num2); 
+//         index++;
+//     }
+// }
 
-void PrintArray (int[] Mas)
-{
-    int Size = Mas.Length;
-    int position = 0;
-    while (position < Size) 
-    {
-        Console.Write($"{Mas[position]} ");
-        position++;
-    }
-}
+// void PrintArray (int[] Mas)
+// {
+//     int Size = Mas.Length;
+//     int position = 0;
+//     while (position < Size) 
+//     {
+//         Console.Write($"{Mas[position]} ");
+//         position++;
+//     }
+// }
 
-int[] array = new int[8];
-FillArray (array);
-PrintArray (array);
+// int[] array = new int[8];
+// FillArray (array);
+// PrintArray (array);
