@@ -84,7 +84,8 @@
 //     {
 //         for (int j = 0; j < arry.GetLength(1); j++)
 //         {
-//             Console.Write(string.Format("{0:0.00}\t", arry[i,j]));   //вывод числа в нужном формате 0.00
+//             Console.Write($"{arry[i,j]:f2}\t");
+//                                 //("{0:0.00}\t", arry[i,j]));   //вывод числа в нужном формате 0.00
 //         }                       //или: ($"{arry[i,j]:f2}\t");
 //         Console.WriteLine();
 //     }
