@@ -1,37 +1,87 @@
 ﻿using System;
 
-public class Answer
-{
-    private static double Length(int[] pointA, int[] pointB)
+public class Answer {
+    public static void PrintArray (int [,] matrix)
     {
       // Введите свое решение ниже
-
-
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            Console.Write($"{matrix[i,j]}\t");     
+        }
+        Console.WriteLine();
     }
 
-  // Не удаляйте и не меняйте метод Main! 
-    public static void Main(string[] args) {
-        int x1, x2, x3, y1, y2, y3;
+    }
+  
+    public static int[,] CreateIncreasingMatrix(int n, int m, int k)
+    {
+      // Введите свое решение ниже
+        int[,] matrix = new int[n, m];
+        int count = 1;
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < matrix.GetLength(1); j++)
+            {
+                matrix[i, j] = count;
+                count += k;
+            }
+        }
+        return matrix;
 
-        if (args.Length >= 6) {
-            x1 = int.Parse(args[0]);
-            x2 = int.Parse(args[1]);
-            x3 = int.Parse(args[2]);
-            y1 = int.Parse(args[3]);
-            y2 = int.Parse(args[4]);
-            y3 = int.Parse(args[5]);
+    }
+  
+    public static int[] FindNumberByPosition (int [,] matrix, int rowPosition, int columnPosition)
+    {  
+      // Введите свое решение ниже
+      int[] position = new int[2] {0, 0};
+      if((rowPosition - 1 > matrix.GetLength(0) - 1)  (columnPosition - 1 > matrix.GetLength(1) - 1))
+      {
+        return position;
+      }
+      else
+      {
+        position[0] = matrix[rowPosition - 1, columnPosition - 1];
+         return position;
+      }
+    }
+
+    public static void PrintCheckIfError (int[] results, int X, int Y)
+    {
+      // Введите свое решение ниже
+      if (results[0] == 0)
+      {
+        Console.Write("There is no such index");
+      }
+      else 
+      {
+        Console.Write($"The number in [{X}, {Y}] is {results[0]}");
+      }
+    }
+
+    // Не удаляйте и не меняйте метод Main! 
+    static public void Main(string[] args) {
+        int n, m, k, x, y;
+
+        if (args.Length >= 5) {
+           n = int.Parse(args[0]);
+           m = int.Parse(args[1]);
+           k = int.Parse(args[2]);
+           x = int.Parse(args[3]);
+           y = int.Parse(args[4]);
         } else {
            // Здесь вы можете поменять значения для отправки кода на Выполнение
-            x1 = 3;
-            x2 = 6;
-            x3 = 8;
-            y1 = 2;
-            y2 = 1;
-            y3 = -7;
+           n = 3;
+           m = 4;
+           k = 2;
+           x = 2;
+           y = 3;
         }
 
         // Не удаляйте строки ниже
-        double result = Length(new int[]{x1, x2, x3}, new int[]{y1, y2, y3});
-        Console.WriteLine($"{result:F2}");
+        int[,] result = CreateIncreasingMatrix(n, m, k);
+        PrintArray(result);
+        PrintCheckIfError(FindNumberByPosition(result, x, y), x, y);
     }
 }
